@@ -2,13 +2,13 @@
 <p>Selamat Datang di Billy Blog</p>
 
 <ul>
-    <% for article in @articles do %>
+  <% @articles.each do |article| %>
     <li>
-        <strong><%= link_to article.title, read_path(article_id: article.id) %></strong>
-        <small>
+      <strong><%= link_to article.title, read_path(article_id: article.id) %></strong>
+      <small>
         Oleh <%= article.user.full_name %>
-        Pada <%= article.created_at.to_s(:short) %>
-        </small>
+        pada <%= article.created_at.to_s(:short) %>
+      </small>
     </li>
-    <% end %>
+  <% end %>
 </ul>

@@ -17,4 +17,7 @@ class HomeController < ApplicationController
       redirect_to read_path(article_id: @article.id, notice: "Error")
     end
   end
+
+  def about
+  end
 end

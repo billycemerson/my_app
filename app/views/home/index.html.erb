@@ -1,11 +1,11 @@
-<ul>
+<div class="articles-container">
   <% @articles.each do |article| %>
-    <li>
+    <div class="article-box">
       <strong><%= link_to article.title, read_path(article_id: article.id) %></strong>
       <small>
-        Oleh <%= article.user.full_name %>
-        pada <%= article.created_at.to_s(:short) %>
+        Oleh <%= article.user.full_name %><br>
+        Pada <%= article.created_at.to_s(:short) %>
       </small>
-    </li>
+    </div>
   <% end %>
-</ul>
+</div>

@@ -1,15 +1,81 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .site-header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 2px -2px gray;
+  }
+  
+  .site-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .site-header p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .main-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 1.1em;
+  }
+  
+  .main-nav a:hover {
+    background-color: #444;
+    border-color: #fff;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .article-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .article-box strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .article-box small {
+    display: block;
+    color: #666;
+    margin-top: 10px;
+  }  

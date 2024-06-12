@@ -5,18 +5,24 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <h1>Billy Blog</h1>
-    <p>Selamat Datang di Billy Blog</p>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Search", search_path %>
-    <%= link_to "About", about_path %>
-    <%= link_to "Login", articles_path %>
-
-    <%= yield %>
+    <header class="site-header">
+      <h1>Billy Blog</h1>
+      <p>Selamat Datang di Billy Blog - Tempat Berbagi Cerita dan Informasi</p>
+      <nav class="main-nav">
+        <%= link_to "Home", root_path %>
+        <%= link_to "Search", search_path %>
+        <%= link_to "About", about_path %>
+        <%= link_to "Login", articles_path %>
+      </nav>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
